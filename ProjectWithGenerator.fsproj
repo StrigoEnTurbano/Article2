@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="AstHelpers/AstHelpers.fsx" />
+    <None Include="AstHelpers/RecordExts.fsx" />
+    <None Include="AstHelpers/UnionExts.fsx" />
+    <Compile Include="AssemblyCompilation.fs" />
+    <Compile Include="Program.fs" />
+    <None Include="MinimalGenerator.fsx" />
+  </ItemGroup>
+	
+  <Target Name="Generate build context" BeforeTargets="BeforeBuild">
+    <Exec Command="dotnet fsi MinimalGenerator.fsx" ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
+    </Exec>
+  </Target>
+
+</Project>
