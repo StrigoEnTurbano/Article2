@@ -1,1 +1,1 @@
-Пример для [статьи](https://habr.com/ru/companies/first/articles/774226/) по кодогену. 
+РџСЂРёРјРµСЂ РґР»СЏ [СЃС‚Р°С‚СЊРё](https://habr.com/ru/companies/first/articles/774226/) РїРѕ РєРѕРґРѕРіРµРЅСѓ. 
